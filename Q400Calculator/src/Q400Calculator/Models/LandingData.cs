@@ -32,12 +32,15 @@ namespace Q400Calculator.Models
         [Display(Name = "OAT")]
         public int OAT { get; set; }
 
-        public LandingData(int weight, int flaps, bool Above20, int oat)
+        public LandingData(int weight, int flaps, bool Above20, int oat, int vApp, int vRef, int Vga)
         {
             this.weight = weight;
             this.flaps = flaps;
             this.above20 = Above20;
             this.OAT = oat;
+            this.vapp = vApp;
+            this.vref = vRef;
+            this.vga = Vga;
         }
         public LandingData()
         {

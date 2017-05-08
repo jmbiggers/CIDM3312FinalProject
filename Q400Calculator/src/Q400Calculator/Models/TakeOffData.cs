@@ -13,7 +13,7 @@ namespace Q400Calculator.Models
 
         public int weight { get; set; }
 
-        [Display(Name = "Flaps 5")]
+        [Display(Name = "Flaps")]
         public int flaps { get; set; }
 
         [Display(Name = "VR Speed")]
@@ -36,9 +36,15 @@ namespace Q400Calculator.Models
 
         }
 
-        public TakeOffData(int Weight, int Flaps, int Altitude, int oat, bool Above20)
+        public TakeOffData(int Weight, int Flaps, int Altitude, int oat, bool Above20, int Vr, int V2)
         {
-
+            this.weight = Weight;
+            this.flaps = Flaps;
+            this.altitude = Altitude;
+            this.OAT = oat;
+            this.above20 = Above20;
+            this.vr = Vr;
+            this.v2 = V2;
         }
 
     }

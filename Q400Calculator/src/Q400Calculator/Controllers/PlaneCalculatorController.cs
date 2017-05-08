@@ -13,6 +13,8 @@ namespace Q400Calculator.Controllers
         // GET: PlaneCalculator
         public IActionResult Index()
         {
+
+
             return View();
         }
 

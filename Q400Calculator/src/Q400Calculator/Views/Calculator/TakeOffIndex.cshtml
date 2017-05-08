@@ -1,0 +1,71 @@
+@model IEnumerable<Q400Calculator.Models.TakeOffData>
+
+@{
+    ViewData["Title"] = "TakeOffIndex";
+}
+
+<h2>TakeOffIndex</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OAT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.above20)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.altitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.flaps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.v2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weight)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.above20)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.altitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.flaps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.v2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.weight)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

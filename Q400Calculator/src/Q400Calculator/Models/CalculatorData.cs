@@ -32,7 +32,7 @@ namespace Q400Calculator.Models
         public bool Icing { get; set; }
 
         public CalculatorData(int heading, int windspeed, int distance, int windDirection,
-                                bool rain, bool snow, bool icing, string direction = "")
+                                bool rain, bool snow, bool icing)
         {
             this.Heading = heading;
             this.WindSpeed = windspeed;
@@ -41,49 +41,6 @@ namespace Q400Calculator.Models
             this.Rain = rain;
             this.Snow = snow;
             this.Icing = icing;
-
-
-            do
-            {
-                if (windDirection <= 44)
-                {
-                    direction = "N";
-                }
-                else if (windDirection > 44 && windDirection < 90)
-                {
-                    direction = "NE";
-                }
-                else if (windDirection >= 90 && windDirection <= 134)
-                {
-                    direction = "E";
-                }
-                else if (windDirection > 134 && windDirection < 180)
-                {
-                    direction = "SE";
-                }
-                else if (windDirection >= 180 && windDirection <= 224)
-                {
-                    direction = "S";
-                }
-                else if (windDirection > 224 && windDirection < 270)
-                {
-                    direction = "SW";
-                }
-                else if (windDirection >= 270 && windDirection <= 314)
-                {
-                    direction = "W";
-                }
-                else if (windDirection > 314 && windDirection < 360)
-                {
-                    direction = "NW";
-                }
-                else if (windDirection == 360)
-                {
-                    windDirection = 0;
-                }
-            } while (direction == "");
-
-            
 
         }
     }
