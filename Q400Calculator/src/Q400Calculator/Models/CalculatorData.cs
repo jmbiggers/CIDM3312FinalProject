@@ -9,6 +9,8 @@ namespace Q400Calculator.Models
 {
     public class CalculatorData
     {
+        [Display(Name ="Pilots Name")]
+        public string Name { get; set; }
 
         [Display(Name = "Runway Heading")]
         public int Heading { get; set; }
@@ -31,9 +33,28 @@ namespace Q400Calculator.Models
         [Display(Name = "Icing Conditions")]
         public bool Icing { get; set; }
 
-        public CalculatorData(int heading, int windspeed, int distance, int windDirection,
-                                bool rain, bool snow, bool icing, string direction = "")
+        [Display(Name = "Headwind")]
+        public bool Headwind { get; set; }
+
+        [Display(Name = "Tailwind")]
+        public bool Tailwind { get; set; }
+
+        [Display(Name = "Landing")]
+        public bool Landing { get; set; }
+
+        [Display(Name = "Takeoff")]
+        public bool TakeOff { get; set; }
+
+
+        public CalculatorData()
         {
+
+        }
+        public CalculatorData(string name, int heading, int windspeed, int distance, int windDirection,
+                                bool rain, bool snow, bool icing, bool headwind, bool tailwind,
+                                bool landing, bool takeOff, string direction = "")
+        {
+            this.Name = name;
             this.Heading = heading;
             this.WindSpeed = windspeed;
             this.WindDirection = windDirection;
@@ -41,6 +62,10 @@ namespace Q400Calculator.Models
             this.Rain = rain;
             this.Snow = snow;
             this.Icing = icing;
+            this.Headwind = headwind;
+            this.Tailwind = tailwind;
+            this.Landing = landing;
+            this.TakeOff = takeOff;
 
 
             do
@@ -82,8 +107,6 @@ namespace Q400Calculator.Models
                     windDirection = 0;
                 }
             } while (direction == "");
-
-            
 
         }
     }

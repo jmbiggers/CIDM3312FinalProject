@@ -1,0 +1,64 @@
+@model Q400Calculator.Models.TakeOffData
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TakeOffData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OAT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OAT)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.above20)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.above20)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.altitude)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.altitude)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.flaps)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.flaps)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.v2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.v2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.vr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.vr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.weight)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.weight)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>
