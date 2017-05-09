@@ -166,7 +166,7 @@ namespace Q400Calculator.Controllers
 
 
 
-            return View();
+            return View("Views/Calculate/Index");
         }
 
         // GET: Calculate/Details/5

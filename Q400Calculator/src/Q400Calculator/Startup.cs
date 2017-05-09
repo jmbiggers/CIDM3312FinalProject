@@ -82,7 +82,7 @@ namespace Q400Calculator
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=CalculatorData}/{action=Index}/{id?}");
+                    template: "{controller=Calculate}/{action=Index}/{id?}");
             });
 
             DbInitializer.Initialize(context);
