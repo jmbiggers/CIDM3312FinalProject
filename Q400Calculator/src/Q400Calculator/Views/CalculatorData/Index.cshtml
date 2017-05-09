@@ -1,12 +1,19 @@
-@model IEnumerable<Q400Calculator.Models.CalculatorModel>
-
+@model IEnumerable<Q400Calculator.Controllers.CalculateController>
 @{ 
     ViewData["title"] = "Index";
-}
 
-<div>
+}
+<a asp-controller="Q400Calculator.Controllers.CalculateController" ></a>
+<div >
     <div class="form-group">
-        <th:label asp-for=""
+        <div method="post" action="simpleform.asp">
+            Pilot Name: <input type="text" name="cm.Calculate.Name" /><br />
+            Weight = <input type="text" (name="cm.Land.Weight" || name="cm.TakeOff.Weight" )/> <br/>
+            Fuel = <input type="text" name="cm.fuel" /><br/>
+            Takeoff: <input type="radio" name="cm.Calculate.TakeOff" value="true" /> or
+            Landing: <input type="radio" name="cm.Calculate.Landing" value="true" /><br />
+
+        </div>
     </div>
 
 

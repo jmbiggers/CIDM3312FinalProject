@@ -29,6 +29,7 @@ namespace Q400Calculator.Controllers
             int heading = 0;
             int distance = 0;
             int windComponent;
+            int weight;
 
         ////////////// Creating and Instance ///////////////
 
